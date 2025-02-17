@@ -1,0 +1,13 @@
+name: binder-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - ipywidgets
+  - ipympl
+  - notebook
