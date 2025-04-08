@@ -82,7 +82,7 @@ def owner_summary():
             plt.rcParams["font.size"] = 14  
     
             # Create figure
-            fig, ax = plt.subplots(figsize=(10, 6))
+            fig, ax = plt.subplots(figsize=(14, 6))
     
             # Plot bars for each selected owner
             x_positions = np.arange(len(selected_names))  
@@ -196,7 +196,7 @@ def playoff_summary():
             plt.rcParams["font.size"] = 14  
     
             # Create figure
-            fig, ax = plt.subplots(figsize=(10, 6))
+            fig, ax = plt.subplots(figsize=(14, 6))
     
             # Plot bars for each selected owner
             x_positions = np.arange(len(selected_names))  
@@ -341,7 +341,7 @@ def head_to_head():
             color2 = name_color_map.get(owner2, "black")
     
             # Create figure
-            fig, ax = plt.subplots(figsize=(10, 6))
+            fig, ax = plt.subplots(figsize=(14, 6))
     
             # Plot bars side by side
             bars = ax.bar([0, 1], [value1, value2], color=[color1, color2], width=0.5)
@@ -525,7 +525,7 @@ def season_by_owner():
             plt.rcParams["font.size"] = 14  
     
             # Create figure
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(14, 5))
     
             for i, name in enumerate(selected_names):
                 subset = filtered_data[filtered_data['owner'] == name]
@@ -727,7 +727,7 @@ def weekly_season():
             plt.rcParams["font.size"] = 14  
     
             # Create figure
-            fig, ax = plt.subplots(figsize=(10, 5))
+            fig, ax = plt.subplots(figsize=(14, 5))
     
             for i, name in enumerate(selected_names):
                 subset = filtered_data[filtered_data['owner'] == name].copy()
