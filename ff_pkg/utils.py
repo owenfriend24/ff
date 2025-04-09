@@ -114,10 +114,13 @@ def owner_summary():
             ax.set_xticklabels(selected_names, rotation=45)
     
             if y_axis_variable in inverted_metrics:
-                ax.set_ylim(0, 8) 
+                ax.set_ylim(0, 7)  # because 8 - 1 = 7 is the max height
+                ax.set_yticks(np.arange(1, 9))  # ticks at logical ranks 1 through 8
+                ax.set_yticklabels([str(i) for i in range(1, 9)][::-1])    # inverted labels: 8 → 0 = label 8
             else:
                 max_value = filtered_data[y_axis_variable].max()
-                ax.set_ylim(0, max_value * 1.1) 
+                ax.set_ylim(0, max_value * 1.1)
+                #ax.set_yticks(np.linspace(0, max_value * 1.1, num=8))
     
             ax.legend(title="Owner", bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0., fontsize=14, title_fontsize=16)
             ax.grid(axis="y", linestyle="--", alpha=0.7)
